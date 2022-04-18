@@ -1,7 +1,17 @@
-h1 {
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@400;700&family=Nova+Round&display=swap');
+.logo-font {
+    font-family: 'Nova Round', cursive;
 }
 
-img {
-    width: 100%;
+.normal-font {
+    font-family: 'Martel', serif;
+}
+
+.primary-color {
+    color: #000
+}
+
+.secondary-color {
+    color: #f9f9f9;
 }
