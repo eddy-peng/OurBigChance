@@ -1,7 +1,33 @@
     @import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Martel:wght@400;700&family=Nova+Round&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Martel&display=swap');
     html {
         cursor: url("black.svg"), auto;
+    }
+    
+    .on-board-text {
+        font-family: 'Martel', serif;
+        color: black;
+    }
+
+    .on-board-text-change {
+        font-family: 'Martel', serif;
+        color: black;
+    }
+    
+    .on-board-text-change:hover {
+        border-radius: 10%;
+        background-color: #ffdeba;
+        text-decoration: underline;
+    }
+    
+    .on-board-box {
+        vertical-align: middle;
+    }
+    
+    .on-board-img {
+        width: 40vw;
+        height: 80vh;
     }
     
     .logo-font {
@@ -13,7 +39,7 @@
     }
     
     .primary-color {
-        color: #000;
+        color: black;
     }
     
     .secondary-color {
@@ -33,7 +59,7 @@
         font-size: 7vw;
         padding-top: 30px;
         padding-bottom: 30px;
-        color: #000;
+        color: black;
         text-align: center;
         font-family: 'Nova Round', cursive;
     }
