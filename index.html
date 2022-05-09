@@ -14,15 +14,19 @@
 
     <!-- load style sheet -->
     <link rel="stylesheet" href="stylesheet.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="index.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:ital,wght@0,300;1,300&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onwheel="toToBlack()">
     <header>
     </header>
 
@@ -47,9 +51,10 @@
 
 
 
-        <div class="intro d-none">
+        <div class="intro d-none h-100" >
             <div class="d-flex justify-content-between">
-                <img class="ms-4 mt-2 on-board-text-change p-1" style="width:4vw; height:4vh;" src="./icon/volumeYes.svg">
+                <img class="ms-4 mt-2 on-board-text-change p-1" style="width:4vw; height:4vh;"
+                    src="./icon/volumeYes.svg">
                 <p class="me-4 mt-2 on-board-text-change p-1">Skip</p>
             </div>
             <div class="d-flex justify-content-around mt-5">
@@ -63,21 +68,62 @@
                     </div>
                 </div>
                 <div>
-                    <img class="on-board-img" src="img/Group_891.svg">
+                    <img class="on-board-img" src="img/dudeBlack.svg">
                 </div>
             </div>
+            <img class="on-board-cirlce-long circle-animation" src="icon/longCircle.svg">
+            <img class="on-board-cirlce-real circle-animation" src="icon/realCircle.svg">
 
             <div class="col text-center">
-                <!-- <img class="" src="icon/components/Arrow.svg"> -->
-
-                <!-- temp -->
                 <div class="scroll-down"></div>
             </div>
         </div>
+
+
+        <div class="intro-black d-none vh-100">
+            <div class="d-flex justify-content-between">
+                <img class="ms-4 mt-2 on-board-text-change p-1" style="width:4vw; height:4vh;"
+                    src="./icon/volumeYesDark.svg">
+                <p class="me-4 mt-2 on-board-text-change p-1 text-white">Skip</p>
+            </div>
+            <div class="d-flex justify-content-around mt-5">
+                <div>
+
+                    <div style="min-height:30vh;"></div>
+
+                    <div class="on-board-box">
+                        <h2 class="on-board-text text-white">For some of us, it takes</h2>
+                        <h2 class="on-board-text text-white">just one thought to force</h2>
+                        <h2 class="on-board-text text-white"> us into darkness.</h2>
+                    </div>
+                </div>
+                <div>
+                    <img class="on-board-img" src="img/dudeWhite.svg">
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="scroll-down"></div>
+            </div>
+        </div>
+
+
     </main>
 
     <footer>
     </footer>
 </body>
+
+<script>
+
+    function toToBlack() {
+        var enterBlack = 0;
+        if (enterBlack == 0) {
+            document.getElementsByClassName('intro-black')[0].classList.remove("d-none")
+            document.getElementsByClassName('intro')[0].classList.add("d-none")
+        }
+        console.log('detected ')
+        enterBlack += 1;
+    }
+</script>
 
 </html>
