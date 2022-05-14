@@ -2,18 +2,12 @@
     "use strict";
     await sleep("3000");
     document.getElementsByClassName('loading')[0].classList.toggle('d-none')
-    document.getElementsByClassName('intro')[0].classList.toggle('active')
-    document.getElementsByClassName('intro')[0].classList.toggle('d-none')
-
-
-    // var enterBlack = 0;
-    // window.onscroll = function (e) {
-    //     if (enterBlack == 0) {
-    //         document.getElementsByClassName('intro-black')[0].classList.remove(d - none)
-    //         document.getElementsByClassName('intro')[0].classList.add(d - none)
-    //     }
-    //     console.log('detected ')
-    // }
+    document.getElementsByClassName('enter-button')[0].classList.toggle('d-none')
+    // document.getElementsByClassName('intro')[0].classList.toggle('d-none')
+   function enter() {
+        document.getElementsByClassName('intro')[0].classList.toggle('active')
+        document.getElementsByClassName('intro')[0].classList.toggle('d-none')
+   }
 })()
 
 
@@ -74,3 +68,4 @@ scrollTrigger('.loader', {
         }, 1000)
     }
 })
+

@@ -41,12 +41,15 @@
             <img src="./icon/components/Arrow.svg">
             <img src="./icon/components/xmenu.svg">
             <img src="./icon/components/hambermenu.svg"> -->
-
-
+            
         <div class="loading">
             <div class="slidein">
             </div>
             <h1 class="center">tunnel-vzn</h1>
+        </div>
+
+        <div class="enter-button">
+            <h1 class="center btn"  onclick="enter()">Enter</h1>
         </div>
 
 
@@ -55,6 +58,11 @@
             <div class="d-flex justify-content-between">
                 <img class="ms-4 mt-2 on-board-text-change p-1" style="width:4vw; height:4vh;"
                     src="./icon/volumeYes.svg">
+                    <audio controls  autoplay="true"
+                    muted="muted" id="theme-music">    
+                        <source src="https://docs.google.com/uc?export=download&id=1qcaDUv3lxrnOufajibXXL27Ymi8I78Us">
+                    </audio>
+        
                 <p class="me-4 mt-2 on-board-text-change p-1">Skip</p>
             </div>
             <div class="d-flex justify-content-around mt-5">
@@ -120,9 +128,15 @@
         if (enterBlack == 0) {
             document.getElementsByClassName('intro-black')[0].classList.remove("d-none")
             document.getElementsByClassName('intro')[0].classList.add("d-none")
+
+            // const music = document.getElementById('theme-music')
+            // music.muted =  true;
+            // music.play();
+            // console.log(music);
         }
         console.log('detected ')
         enterBlack += 1;
+
     }
 </script>
 
