@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Martel:wght@400;700&family=Nova+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Martel&display=swap');
 
-html {
+body {
     cursor: url("black.svg"), auto;
 }
 
