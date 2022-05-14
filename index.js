@@ -4,13 +4,31 @@
     document.getElementsByClassName('loading')[0].classList.toggle('d-none')
     document.getElementsByClassName('enter-button')[0].classList.toggle('d-none')
     // document.getElementsByClassName('intro')[0].classList.toggle('d-none')
-   function enter() {
-        document.getElementsByClassName('intro')[0].classList.toggle('active')
-        document.getElementsByClassName('intro')[0].classList.toggle('d-none')
-   }
 })()
 
+function enter() {
+    document.getElementsByClassName('enter-button')[0].classList.toggle('d-none')
+    document.getElementsByClassName('intro')[0].classList.toggle('active')
+    document.getElementsByClassName('intro')[0].classList.toggle('d-none')
+    document.getElementById('theme-music').play()
+}
 
+function  musicMute(){
+    var music = document.getElementById('theme-music')
+    if (music.muted) {
+        music.muted = false;
+        document.getElementById('light-sound').classList.toggle("d-none")
+        document.getElementById('light-mute').classList.toggle("d-none")
+        document.getElementById('dark-sound').classList.toggle("d-none")
+        document.getElementById('dark-mute').classList.toggle("d-none")
+    } else{
+        music.muted = true;
+        document.getElementById('light-sound').classList.toggle("d-none")
+        document.getElementById('light-mute').classList.toggle("d-none")
+        document.getElementById('dark-sound').classList.toggle("d-none")
+        document.getElementById('dark-mute').classList.toggle("d-none")
+    }
+}
 
 
 function sleep(ms) {
