@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Team: Eddy, ">
-    <meta name="description" content="Our winfo hackathon 2022 submission">
+    <meta name="author" content="Tunnel_vzn">
+    <meta name="description" content="Mental health and social struggle storytelling">
     <title>Tunnel_vzn</title>
 
     <!-- for title icon -->
@@ -45,14 +45,14 @@
         <div class="loading">
             <div class="slidein">
             </div>
-            <h1 class="center">tunnel-vzn</h1>
+            <h1 class="center">tunnel_vzn</h1>
         </div>
 
         <div class="enter-button  d-none  w-100 text-center" style="min-height: 100vh">
-            <h1 class="logo-font enter-slide" style="margin-top: 30vh; color:black; font-size: 90px;">tunnel-vzn</h1>
-            <h3 class="mb-5 logo-font enter-style ">Storytelling_ Perspective_Change</h3>
+            <h1 class="logo-font enter-slide" style="margin-top: 30vh; color:black; font-size: 90px;">tunnel_vzn</h1>
+            <h3 class="mb-5 logo-font enter-style ">Storytelling_Perspective_Change</h3>
             <h1 class="center btn enter-style" style="color:white; background-color: black;" onclick="enter()">Enter the
-                expereince</h1>
+                experience</h1>
         </div>
 
 
@@ -105,18 +105,24 @@
 
                     <div style="min-height:30vh;"></div>
 
-                    <div class="on-board-box">
+                    <div id="black-text-one" class="on-board-box">
                         <h2 class="on-board-text text-white">For some of us, it takes</h2>
                         <h2 class="on-board-text text-white">just one thought to force</h2>
                         <h2 class="on-board-text text-white"> us into darkness.</h2>
                     </div>
+                    
+                    <div id="black-text-two" class="on-board-box-change d-none">
+                        <h2 class="on-board-text text-white">We are told repeatedly</h2>
+                        <h2 class="on-board-text text-white">not to compare ourselves</h2>
+                        <h2 class="on-board-text text-white">to others.</h2>
+                    </div>
                 </div>
                 <div>
-                    <img class="on-board-img" src="img/dudeWhite.svg">
+                    <img id="shift-white-dude" class="on-board-img" src="img/dudeWhite.svg">
                 </div>
             </div>
             <div class="col text-center">
-                <div class="scroll-down"></div>
+                <div class="scroll-down-white"></div>
             </div>
         </div>
 
@@ -128,16 +134,27 @@
 </body>
 
 <script>
-    function toToBlack() {
-        var enterBlack = 0;
-        if (enterBlack == 0) {
+    var scrollCount= 0;
+    async function toToBlack() {
+        scrollCount += 1;
+        
+        
+        if (scrollCount == 1) {
             document.getElementsByClassName('intro-black')[0].classList.remove("d-none")
             document.getElementsByClassName('intro')[0].classList.add("d-none")
             document.body.style.cursor =  "url(\"white.svg\"), auto";
-            console.log(document.body.style.cursor)
+            
         }
-        console.log('detected ')
-        enterBlack += 1;
+        console.log('detected ', scrollCount)
+        
+        if (scrollCount == 10) {
+            await sleep("1000");
+            document.getElementById('black-text-two').classList.remove("d-none")
+            document.getElementById('black-text-one').classList.add("d-none")
+            document.getElementById('shift-white-dude').classList.add("shift-white-dude-change")
+            // document.getElementById('shift-white-dude').style = "margin-top: 900px";
+        }
+        // scrollCount += 1;
 
     }
 </script>
