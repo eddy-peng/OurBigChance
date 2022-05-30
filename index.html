@@ -31,23 +31,15 @@
     </header>
 
     <main>
-        <!-- <h1>Support me on Ko-fi! NOW! >:(</h1>
-            <img src="./icon/kofi_button_black.png">
-            <img src="./icon/social-media/donation.svg">
-            <img src="./icon/social-media/instagram.svg">
-            <img src="./icon/social-media/mail.svg">
-            <img src="./icon/social-media/linkedin.svg">
-
-            <img src="./icon/components/Arrow.svg">
-            <img src="./icon/components/xmenu.svg">
-            <img src="./icon/components/hambermenu.svg"> -->
-
+       
+        <!-- slide in bar (Loading screen) at the beginning -->
         <div class="loading">
             <div class="slidein">
             </div>
             <h1 class="center">tunnel_vzn</h1>
         </div>
 
+        <!-- enter the story page -->
         <div class="enter-button  d-none  w-100 text-center" style="min-height: 100vh">
             <h1 class="logo-font enter-slide" style="margin-top: 30vh; color:black; font-size: 90px;">tunnel_vzn</h1>
             <h3 class="mb-5 logo-font enter-style ">Storytelling_Perspective_Change</h3>
@@ -56,30 +48,30 @@
         </div>
 
 
-
+        <!-- transition white background -->
         <div class="intro d-none h-100">
             <div class="d-flex justify-content-between">
-                <img id="light-sound" class="btn ms-4 mt-2 on-board-text-change p-1" style="width:4vw; height:4vh;"
+                <img id="light-sound" class="interactive-button btn ms-4 mt-2 on-board-text-change p-1"
                     src="./icon/volumeYes.svg" onclick="musicMute()">
-                <img id="light-mute" class="d-none btn ms-4 mt-2 on-board-text-change p-1"
-                    style="width:4vw; height:4vh;" src="./icon/volumeLightNo.svg" onclick="musicMute()">
+                <img id="light-mute" class="interactive-button d-none btn ms-4 mt-2 on-board-text-change p-1"
+                    src="./icon/volumeLightNo.svg" onclick="musicMute()">
                 <audio id="theme-music">
                     <source src="https://docs.google.com/uc?export=download&id=1qcaDUv3lxrnOufajibXXL27Ymi8I78Us">
                 </audio>
 
                 <p class="me-4 mt-2 on-board-text-change p-1">Skip</p>
             </div>
-            <div class="d-flex justify-content-around mt-5">
+            <div class="d-flex flex-column-reverse flex-md-row justify-content-around mt-5">
                 <div>
 
-                    <div style="min-height:30vh;"></div>
+                    <div class="d-none d-md-block" style="min-height:30vh;"></div>
 
-                    <div class="on-board-box">
+                    <div class="on-board-box d-block">
                         <h2 class="on-board-text">As college students, we</h2>
                         <h2 class="on-board-text">express similar feelings.</h2>
                     </div>
                 </div>
-                <div>
+                <div class="d-flex d-md-block justify-content-center">
                     <img class="on-board-img" src="img/dudeBlack.svg">
                 </div>
             </div>
@@ -92,11 +84,12 @@
         </div>
 
 
+        <!-- transition black background -->
         <div class="intro-black d-none vh-100">
             <div class="d-flex justify-content-between">
-                <img id="dark-sound" class="ms-4 mt-2 on-board-text-change p-1" style="width:4vw; height:4vh;"
+                <img id="dark-sound" class="interactive-button  ms-4 mt-2 on-board-text-change p-1"
                     src="./icon/volumeYesDark.svg" onclick="musicMute()">
-                <img id="dark-mute" class="d-none btn ms-4 mt-2 on-board-text-change p-1" style="width:4vw; height:4vh;"
+                <img id="dark-mute" class="interactive-button d-none btn ms-4 mt-2 on-board-text-change p-1"
                     src="./icon/volumeDarkNo.svg" onclick="musicMute()">
                 <p class="me-4 mt-2 on-board-text-change p-1 text-white">Skip</p>
             </div>
@@ -104,13 +97,15 @@
                 <div>
 
                     <div style="min-height:30vh;"></div>
-
+                    
+                    <!-- first time this text should show -->
                     <div id="black-text-one" class="on-board-box">
                         <h2 class="on-board-text text-white">For some of us, it takes</h2>
                         <h2 class="on-board-text text-white">just one thought to force</h2>
                         <h2 class="on-board-text text-white"> us into darkness.</h2>
                     </div>
                     
+                    <!-- show after scroll -->
                     <div id="black-text-two" class="on-board-box-change d-none">
                         <h2 class="on-board-text text-white">We are told repeatedly</h2>
                         <h2 class="on-board-text text-white">not to compare ourselves</h2>
@@ -135,6 +130,8 @@
 
 <script>
     var scrollCount= 0;
+
+    // scroll function
     async function toToBlack() {
         scrollCount += 1;
         
