@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Tunnel_vzn">
-    <meta name="description" content="Mental health and social struggle storytelling">
+    <meta name="description" content="Mental health and social struggle storytelling landing site">
     <title>Tunnel_vzn</title>
 
     <!-- for title icon -->
@@ -31,7 +31,7 @@
     </header>
 
     <main>
-       
+
         <!-- slide in bar (Loading screen) at the beginning -->
         <div class="loading">
             <div class="slidein">
@@ -97,14 +97,14 @@
                 <div>
 
                     <div style="min-height:30vh;"></div>
-                    
+
                     <!-- first time this text should show -->
                     <div id="black-text-one" class="on-board-box">
                         <h2 class="on-board-text text-white">For some of us, it takes</h2>
                         <h2 class="on-board-text text-white">just one thought to force</h2>
                         <h2 class="on-board-text text-white"> us into darkness.</h2>
                     </div>
-                    
+
                     <!-- show after scroll -->
                     <div id="black-text-two" class="on-board-box-change d-none">
                         <h2 class="on-board-text text-white">We are told repeatedly</h2>
@@ -112,7 +112,12 @@
                         <h2 class="on-board-text text-white">to others.</h2>
                     </div>
                 </div>
-                <div>
+                <div class="d-flex-column justify-content-center">
+                    <div id="clouds" class="d-none d-flex-column">
+                        <img src="img/dream.svg" style="width: 100%; height: 20vh; max-height: 20vh;">
+                        <img src="img/cloud.svg" class="ms-4" style="width:100%; height: 3vh;">
+                        <img src="img/cloud.svg" class="ms-1"  style="width: 100%; height: 2vh;">
+                    </div>
                     <img id="shift-white-dude" class="on-board-img" src="img/dudeWhite.svg">
                 </div>
             </div>
@@ -129,26 +134,30 @@
 </body>
 
 <script>
-    var scrollCount= 0;
+    var scrollCount = 0;
 
     // scroll function
     async function toToBlack() {
         scrollCount += 1;
-        
-        
+
+
         if (scrollCount == 1) {
             document.getElementsByClassName('intro-black')[0].classList.remove("d-none")
             document.getElementsByClassName('intro')[0].classList.add("d-none")
-            document.body.style.cursor =  "url(\"white.svg\"), auto";
-            
+            document.body.style.cursor = "url(\"white.svg\"), auto";
+
         }
         console.log('detected ', scrollCount)
-        
-        if (scrollCount == 10) {
+
+        if (scrollCount == 2) {
             await sleep("1000");
             document.getElementById('black-text-two').classList.remove("d-none")
             document.getElementById('black-text-one').classList.add("d-none")
             document.getElementById('shift-white-dude').classList.add("shift-white-dude-change")
+            document.getElementById('shift-white-dude').classList.remove("on-board-img")
+            await sleep("1500");
+            document.getElementById('clouds') .classList.toggle("d-none") 
+            document.getElementById('shift-white-dude').style = "margin-top: 0vh !important;"
             // document.getElementById('shift-white-dude').style = "margin-top: 900px";
         }
         // scrollCount += 1;

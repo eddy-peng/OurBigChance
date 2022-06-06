@@ -83,6 +83,7 @@ body {
 }
 
 .shift-white-dude-change{
+    width: 100%;
     animation: move_down_and_shrink ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -90,18 +91,13 @@ body {
 
 @keyframes move_down_and_shrink {
     0% {
-        margin-top: 0px;
-        transform: scale(1);
-    }
-
-    50% {
-        margin-top: 450px;
-        transform: scale(0.8);
+        height: 70vh; 
+        margin-top: 0vh;
     }
 
     100% {
-        margin-top: 900px;
-        transform: scale(0.5);
+        height: 45vh;
+        margin-top: 26vh;
     }
 }
 
@@ -249,6 +245,12 @@ body {
     animation-fill-mode: forwards;
 }
 
+#clouds{
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -308,10 +310,6 @@ body {
         -webkit-transform: scale(1.0);
     }
 }
-
-
-
-
 
 
 @media (max-width: 768px) {
