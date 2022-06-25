@@ -21,12 +21,16 @@ function  musicMute(){
         document.getElementById('light-mute').classList.toggle("d-none")
         document.getElementById('dark-sound').classList.toggle("d-none")
         document.getElementById('dark-mute').classList.toggle("d-none")
+        document.getElementById('light-sound-home').classList.toggle("d-none")
+        document.getElementById('light-mute-home').classList.toggle("d-none")
     } else{
         music.muted = true;
         document.getElementById('light-sound').classList.toggle("d-none")
         document.getElementById('light-mute').classList.toggle("d-none")
         document.getElementById('dark-sound').classList.toggle("d-none")
         document.getElementById('dark-mute').classList.toggle("d-none")
+        document.getElementById('light-sound-home').classList.toggle("d-none")
+        document.getElementById('light-mute-home').classList.toggle("d-none")
     }
 }
 
@@ -71,5 +75,15 @@ function addObserver(el, options) {
     observer.observe(el)
 }
 
+
+function showHomePage(){
+    document.getElementById("animation").classList.add("d-none")
+    document.getElementById("home").classList.remove("d-none")
+}
+
+function showMenu(){
+    document.getElementById("menu-closed").classList.toggle("d-none")
+    document.getElementById("menu-opened").classList.toggle("d-none")
+}
 
 

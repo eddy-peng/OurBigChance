@@ -89,6 +89,25 @@ body {
     animation-fill-mode: forwards;
 }
 
+.showcase-wrapper {
+    position:absolute;
+    display:block;
+    top:0;
+    right:20vh;
+    max-height:100vw;
+    margin:0;
+    overflow-y:auto;
+    overflow-x:hidden;
+    transform:rotate(-90deg) translateY(-80px);
+}
+
+.showcase-wrapper > div {
+    display:block;
+    padding:5px;
+    transform:rotate(90deg);
+    transform-origin: right top;
+  }
+
 @keyframes move_down_and_shrink {
     0% {
         height: 70vh; 

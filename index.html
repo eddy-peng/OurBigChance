@@ -31,102 +31,149 @@
     </header>
 
     <main>
-
-        <!-- slide in bar (Loading screen) at the beginning -->
-        <div class="loading">
-            <div class="slidein">
+        <audio id="theme-music">
+            <source src="https://docs.google.com/uc?export=download&id=1qcaDUv3lxrnOufajibXXL27Ymi8I78Us">
+        </audio>
+        <div id="animation">
+            <!-- slide in bar (Loading screen) at the beginning -->
+            <div class="loading">
+                <div class="slidein">
+                </div>
+                <h1 class="center">tunnel_vzn</h1>
             </div>
-            <h1 class="center">tunnel_vzn</h1>
+
+            <!-- enter the story page -->
+            <div class="enter-button  d-none  w-100 text-center" style="min-height: 100vh">
+                <h1 class="logo-font enter-slide" style="margin-top: 30vh; color:black; font-size: 90px;">tunnel_vzn
+                </h1>
+                <h3 class="mb-5 logo-font enter-style ">Storytelling_Perspective_Change</h3>
+                <h1 class="center btn enter-style" style="color:white; background-color: black;" onclick="enter()">Enter
+                    the
+                    experience</h1>
+            </div>
+
+
+            <!-- transition white background -->
+            <div class="intro d-none h-100">
+                <div class="d-flex justify-content-between">
+                    <img id="light-sound" class="interactive-button btn ms-4 mt-2 on-board-text-change p-1"
+                        src="./icon/volumeYes.svg" onclick="musicMute()">
+                    <img id="light-mute" class="interactive-button d-none btn ms-4 mt-2 on-board-text-change p-1"
+                        src="./icon/volumeLightNo.svg" onclick="musicMute()">
+
+                    <p class="me-4 mt-2 on-board-text-change p-1" onclick="showHomePage()">Skip</p>
+                </div>
+                <div class="d-flex flex-column-reverse flex-md-row justify-content-around mt-5">
+                    <div>
+
+                        <div class="d-none d-md-block" style="min-height:30vh;"></div>
+
+                        <div class="on-board-box d-block">
+                            <h2 class="on-board-text">As college students, we</h2>
+                            <h2 class="on-board-text">express similar feelings.</h2>
+                        </div>
+                    </div>
+                    <div class="d-flex d-md-block justify-content-center">
+                        <img class="on-board-img" src="img/dudeBlack.svg">
+                    </div>
+                </div>
+                <img class="on-board-cirlce-long circle-animation" src="icon/longCircle.svg">
+                <img class="on-board-cirlce-real circle-animation" src="icon/realCircle.svg">
+
+                <div class="col text-center">
+                    <div class="scroll-down"></div>
+                </div>
+            </div>
+
+
+            <!-- transition black background -->
+            <div class="intro-black d-none vh-100">
+                <div class="d-flex justify-content-between">
+                    <img id="dark-sound" class="interactive-button  ms-4 mt-2 on-board-text-change p-1"
+                        src="./icon/volumeYesDark.svg" onclick="musicMute()">
+                    <img id="dark-mute" class="interactive-button d-none btn ms-4 mt-2 on-board-text-change p-1"
+                        src="./icon/volumeDarkNo.svg" onclick="musicMute()">
+                    <p class="me-4 mt-2 on-board-text-change p-1 text-white" onclick="showHomePage()">Skip</p>
+                </div>
+                <div class="d-flex justify-content-around mt-5">
+                    <div>
+
+                        <div style="min-height:30vh;"></div>
+
+                        <!-- first time this text should show -->
+                        <div id="black-text-one" class="on-board-box">
+                            <h2 class="on-board-text text-white">For some of us, it takes</h2>
+                            <h2 class="on-board-text text-white">just one thought to force</h2>
+                            <h2 class="on-board-text text-white"> us into darkness.</h2>
+                        </div>
+
+                        <!-- show after scroll -->
+                        <div id="black-text-two" class="on-board-box-change d-none">
+                            <h2 class="on-board-text text-white">We are told repeatedly</h2>
+                            <h2 class="on-board-text text-white">not to compare ourselves</h2>
+                            <h2 class="on-board-text text-white">to others.</h2>
+                        </div>
+                    </div>
+                    <div class="d-flex-column justify-content-center">
+                        <div id="clouds" class="d-none d-flex-column">
+                            <img src="img/dream.svg" style="width: 100%; height: 20vh; max-height: 20vh;">
+                            <img src="img/cloud.svg" class="ms-4" style="width:100%; height: 3vh;">
+                            <img src="img/cloud.svg" class="ms-1" style="width: 100%; height: 2vh;">
+                        </div>
+                        <img id="shift-white-dude" class="on-board-img" src="img/dudeWhite.svg">
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="scroll-down-white"></div>
+                </div>
+            </div>
         </div>
 
-        <!-- enter the story page -->
-        <div class="enter-button  d-none  w-100 text-center" style="min-height: 100vh">
-            <h1 class="logo-font enter-slide" style="margin-top: 30vh; color:black; font-size: 90px;">tunnel_vzn</h1>
-            <h3 class="mb-5 logo-font enter-style ">Storytelling_Perspective_Change</h3>
-            <h1 class="center btn enter-style" style="color:white; background-color: black;" onclick="enter()">Enter the
-                experience</h1>
-        </div>
-
-
-        <!-- transition white background -->
-        <div class="intro d-none h-100">
+        <div id="home" class="d-none">
             <div class="d-flex justify-content-between">
-                <img id="light-sound" class="interactive-button btn ms-4 mt-2 on-board-text-change p-1"
+                <img id="light-sound-home" class="interactive-button btn ms-4 mt-2 on-board-text-change p-1"
                     src="./icon/volumeYes.svg" onclick="musicMute()">
-                <img id="light-mute" class="interactive-button d-none btn ms-4 mt-2 on-board-text-change p-1"
+                <img id="light-mute-home" class="interactive-button d-none btn ms-4 mt-2 on-board-text-change p-1"
                     src="./icon/volumeLightNo.svg" onclick="musicMute()">
-                <audio id="theme-music">
-                    <source src="https://docs.google.com/uc?export=download&id=1qcaDUv3lxrnOufajibXXL27Ymi8I78Us">
-                </audio>
 
-                <p class="me-4 mt-2 on-board-text-change p-1">Skip</p>
+                <h5 class="mt-4 logo-font">tunnel_vzn</h5>
+
+                <p id="menu-closed" class="me-4 mt-4 on-board-text-change p-1" onclick="showMenu()"><svg width="30" height="30" viewBox="0 0 63 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.45605 5.90039L1.25 1.13184H59.6865L61.9642 5.90039H3.45605Z" fill="black" stroke="black"/>
+                    <path d="M3.45605 20.6699L1.25 15.9014H59.6865L61.9642 20.6699H3.45605Z" fill="black" stroke="black"/>
+                    </svg>
+                </p>
+                <p id="menu-opened" class="me-4 mt-4 on-board-text-change p-1 d-none" onclick="showMenu()">
+                    <svg width="30" height="30" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.61148 46.4931L1.67969 44.6812L43.0006 3.36028L47.983 5.12159L6.61148 46.4931Z" fill="black" stroke="black"/>
+                        <path d="M3.23882 6.68131L5.05078 1.74951L46.3717 43.0704L44.6103 48.0528L3.23882 6.68131Z" fill="black" stroke="black"/>
+                    </svg>
+                </p>
             </div>
-            <div class="d-flex flex-column-reverse flex-md-row justify-content-around mt-5">
+
+            <div class=" mt-5 showcase-wrapper" >
                 <div>
-
-                    <div class="d-none d-md-block" style="min-height:30vh;"></div>
-
-                    <div class="on-board-box d-block">
-                        <h2 class="on-board-text">As college students, we</h2>
-                        <h2 class="on-board-text">express similar feelings.</h2>
-                    </div>
+                    <img class="w-75 ms-5 me-5" src="./img/storyCover.svg">
                 </div>
-                <div class="d-flex d-md-block justify-content-center">
-                    <img class="on-board-img" src="img/dudeBlack.svg">
-                </div>
-            </div>
-            <img class="on-board-cirlce-long circle-animation" src="icon/longCircle.svg">
-            <img class="on-board-cirlce-real circle-animation" src="icon/realCircle.svg">
-
-            <div class="col text-center">
-                <div class="scroll-down"></div>
-            </div>
-        </div>
-
-
-        <!-- transition black background -->
-        <div class="intro-black d-none vh-100">
-            <div class="d-flex justify-content-between">
-                <img id="dark-sound" class="interactive-button  ms-4 mt-2 on-board-text-change p-1"
-                    src="./icon/volumeYesDark.svg" onclick="musicMute()">
-                <img id="dark-mute" class="interactive-button d-none btn ms-4 mt-2 on-board-text-change p-1"
-                    src="./icon/volumeDarkNo.svg" onclick="musicMute()">
-                <p class="me-4 mt-2 on-board-text-change p-1 text-white">Skip</p>
-            </div>
-            <div class="d-flex justify-content-around mt-5">
                 <div>
-
-                    <div style="min-height:30vh;"></div>
-
-                    <!-- first time this text should show -->
-                    <div id="black-text-one" class="on-board-box">
-                        <h2 class="on-board-text text-white">For some of us, it takes</h2>
-                        <h2 class="on-board-text text-white">just one thought to force</h2>
-                        <h2 class="on-board-text text-white"> us into darkness.</h2>
-                    </div>
-
-                    <!-- show after scroll -->
-                    <div id="black-text-two" class="on-board-box-change d-none">
-                        <h2 class="on-board-text text-white">We are told repeatedly</h2>
-                        <h2 class="on-board-text text-white">not to compare ourselves</h2>
-                        <h2 class="on-board-text text-white">to others.</h2>
-                    </div>
+                    <img class="w-75 ms-5 me-5" src="./img/storyCover.svg">
                 </div>
-                <div class="d-flex-column justify-content-center">
-                    <div id="clouds" class="d-none d-flex-column">
-                        <img src="img/dream.svg" style="width: 100%; height: 20vh; max-height: 20vh;">
-                        <img src="img/cloud.svg" class="ms-4" style="width:100%; height: 3vh;">
-                        <img src="img/cloud.svg" class="ms-1"  style="width: 100%; height: 2vh;">
-                    </div>
-                    <img id="shift-white-dude" class="on-board-img" src="img/dudeWhite.svg">
+                <div>
+                    <img class="w-75 ms-5 me-5" src="./img/storyCover.svg">
+                </div>
+                <div>
+                    <img class="w-75 ms-5 me-5" src="./img/storyCover.svg">
+                </div>
+                <div>
+                    <img class="w-75 ms-5 me-5" src="./img/storyCover.svg">
+                </div>
+                <div>
+                    <img class="w-75 ms-5 me-5" src="./img/storyCover.svg">
                 </div>
             </div>
-            <div class="col text-center">
-                <div class="scroll-down-white"></div>
-            </div>
+            
+            <h2>this is home</h2>
         </div>
-
-
     </main>
 
     <footer>
@@ -156,7 +203,7 @@
             document.getElementById('shift-white-dude').classList.add("shift-white-dude-change")
             document.getElementById('shift-white-dude').classList.remove("on-board-img")
             await sleep("1500");
-            document.getElementById('clouds') .classList.toggle("d-none") 
+            document.getElementById('clouds').classList.toggle("d-none")
             document.getElementById('shift-white-dude').style = "margin-top: 0vh !important;"
             // document.getElementById('shift-white-dude').style = "margin-top: 900px";
         }
