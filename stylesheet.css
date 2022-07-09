@@ -89,7 +89,37 @@ body {
     animation-fill-mode: forwards;
 }
 
-.showcase-wrapper {
+.home-img {
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    width: 20vw; 
+    height:auto;
+    margin-bottom: 2vw;
+    transition: 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+}
+
+.home-img:hover {
+    width: 22vw;
+    margin-top: -2vw;
+}
+
+  /* Scroll 3 */
+.sc3::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .sc3::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  .sc3::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+
+/* .showcase-wrapper {
     position:absolute;
     display:block;
     top:0;
@@ -106,7 +136,7 @@ body {
     padding:5px;
     transform:rotate(90deg);
     transform-origin: right top;
-  }
+  } */
 
 @keyframes move_down_and_shrink {
     0% {
