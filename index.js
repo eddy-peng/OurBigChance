@@ -75,10 +75,6 @@ function addObserver(el, options) {
     observer.observe(el)
 }
 
-const sideNav = document.getElementById("sidenav")
-    sideNav.addEventListener('blur', ()=>{
-        sideNav.classList.remove('extend')
-    })
 
 function showHomePage(){
     document.getElementById("animation").classList.add("d-none")
@@ -88,7 +84,17 @@ function showHomePage(){
 function showMenu(){
     document.getElementById("menu-closed").classList.toggle("close")
     document.getElementById("menu-opened").classList.toggle("close")
-    sideNav.classList.add('extend')
+    const sideNav = document.getElementById("sidenav")
+    console.log(sideNav)
+    sideNav.classList.toggle('extend')
+    sideNav.focus()
+    console.log(document.activeElement);
+    sideNav.addEventListener('blur', ()=>{
+        console.log('blur')
+        sideNav.classList.remove('extend')
+    })
 }
+
+
 
 

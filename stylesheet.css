@@ -40,8 +40,9 @@ body {
 }
 .menu{
     opacity: 1;
-    height: auto;
+    height: 0;
     transition: 0.3s ease;
+    z-index: 100;
 }
 
 .menu.close{
@@ -50,16 +51,31 @@ body {
 }
 
 .sidenav {
+    position:absolute;
+    background-color: #f1f1f1;
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+  }
+  .social-icon{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: 0.3s ease;
+  }
+
+  .social-icon:hover{
+    background-color: #dadada;
+    border-radius: 10px;
+    border: 0px;
+    padding: 3px;
   }
   
   .sidenav a {
@@ -69,6 +85,7 @@ body {
     color: #818181;
     display: block;
     transition: 0.3s;
+    font-size: xx-large;
   }
   
   .sidenav a:hover {
@@ -83,10 +100,13 @@ body {
     margin-left: 50px;
   }
 
-  .sidenav .extend{
-    width: 25vw;
+  .sidenav.extend{
+    width: 50vw;
   }
 
+.selected-nav{
+    background-color: aliceblue;
+}
 
 .on-board-box {
     vertical-align: middle;
