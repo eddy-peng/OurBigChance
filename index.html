@@ -130,39 +130,53 @@
         </div>
 
         <div id="home" class="d-none" style="height:100vh">
-            <div class="d-flex justify-content-between">
-                <img id="light-sound-home" class="interactive-button btn ms-4 mt-2 on-board-text-change p-1"
-                    src="./icon/volumeYes.svg" onclick="musicMute()">
-                <img id="light-mute-home" class="interactive-button d-none btn ms-4 mt-2 on-board-text-change p-1"
-                    src="./icon/volumeLightNo.svg" onclick="musicMute()">
+            <div id="sidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+              </div>
+            <div class="main-content">
+                <div class="d-flex justify-content-between">
+                    <img id="light-sound-home" class="interactive-button btn ms-4 mt-2 on-board-text-change p-1"
+                        src="./icon/volumeYes.svg" onclick="musicMute()">
+                    <img id="light-mute-home" class="interactive-button d-none btn ms-4 mt-2 on-board-text-change p-1"
+                        src="./icon/volumeLightNo.svg" onclick="musicMute()">
 
-                <h5 class="mt-4 logo-font">tunnel_vzn</h5>
+                    <h5 class="mt-4 logo-font">tunnel_vzn</h5>
 
-                <p id="menu-closed" class="me-4 mt-4 on-board-text-change p-1" onclick="showMenu()"><svg width="30"
-                        height="30" viewBox="0 0 63 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.45605 5.90039L1.25 1.13184H59.6865L61.9642 5.90039H3.45605Z" fill="black"
-                            stroke="black" />
-                        <path d="M3.45605 20.6699L1.25 15.9014H59.6865L61.9642 20.6699H3.45605Z" fill="black"
-                            stroke="black" />
-                    </svg>
-                </p>
-                <p id="menu-opened" class="me-4 mt-4 on-board-text-change p-1 d-none" onclick="showMenu()">
-                    <svg width="30" height="30" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.61148 46.4931L1.67969 44.6812L43.0006 3.36028L47.983 5.12159L6.61148 46.4931Z"
-                            fill="black" stroke="black" />
-                        <path d="M3.23882 6.68131L5.05078 1.74951L46.3717 43.0704L44.6103 48.0528L3.23882 6.68131Z"
-                            fill="black" stroke="black" />
-                    </svg>
-                </p>
-            </div>
-            <div class="d-flex flex-column justify-content-center" style="height: -webkit-fill-available">
-                <div id="img-gallery" class=" mt-5 d-flex sc3" style="overflow-x:scroll;height: 80vh">
-                    <img class="home-img" src="./img/storyCover.svg">
-                    <img class="home-img" src="./img/storyCover.svg">
-                    <img class="home-img" src="./img/storyCover.svg">
-                    <img class="home-img" src="./img/storyCover.svg">
-                    <img class="home-img" src="./img/storyCover.svg">
-                    <img class="home-img" src="./img/storyCover.svg">
+                    <div class="me-4 mt-4 on-board-text-change p-1">
+                        <div id="menu-closed" class="menu" onclick="showMenu()"><svg width="30" height="30"
+                                viewBox="0 0 63 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.45605 5.90039L1.25 1.13184H59.6865L61.9642 5.90039H3.45605Z" fill="black"
+                                    stroke="black" />
+                                <path d="M3.45605 20.6699L1.25 15.9014H59.6865L61.9642 20.6699H3.45605Z" fill="black"
+                                    stroke="black" />
+                            </svg>
+                        </div>
+                        <div id="menu-opened" class="menu close" onclick="showMenu()">
+                            <svg width="30" height="30" viewBox="0 0 49 49" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.61148 46.4931L1.67969 44.6812L43.0006 3.36028L47.983 5.12159L6.61148 46.4931Z"
+                                    fill="black" stroke="black" />
+                                <path
+                                    d="M3.23882 6.68131L5.05078 1.74951L46.3717 43.0704L44.6103 48.0528L3.23882 6.68131Z"
+                                    fill="black" stroke="black" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column justify-content-center" style="height: -webkit-fill-available">
+                    <div id="img-gallery" class=" mt-5 d-flex sc3" style="overflow-x:scroll;height: 80vh">
+                        <img class="home-img" src="./img/storyCover.svg">
+                        <img class="home-img" src="./img/storyCover.svg">
+                        <img class="home-img" src="./img/storyCover.svg">
+                        <img class="home-img" src="./img/storyCover.svg">
+                        <img class="home-img" src="./img/storyCover.svg">
+                        <img class="home-img" src="./img/storyCover.svg">
+                    </div>
                 </div>
             </div>
         </div>
