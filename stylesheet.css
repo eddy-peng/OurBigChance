@@ -50,6 +50,36 @@ body {
     height: 0;
 }
 
+.linkGroup {
+    margin-left: 20px;
+}
+
+.linkTitle {
+    padding-left: 12px;
+}
+
+#socialLinks {
+    margin: 0;
+    padding: 0;
+    list-style: none;  
+}
+
+#socialLinks li {
+    float: left;
+}
+
+#socialLinks li a { 
+    display:block; 
+    padding:12px; 
+    border:1px solid #f1f1f1; 
+}
+#socialLinks li a:hover { 
+    /* width: 22vw; */
+    margin-top: -1vw;
+}
+
+
+
 .sidenav {
     position:absolute;
     background-color: #f1f1f1;
@@ -63,33 +93,14 @@ body {
     transition: 0.5s;
     padding-top: 60px;
   }
-  .social-icon{
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-    border: 3px solid transparent;
-    transition: 0.3s ease;
-  }
 
-  .social-icon:hover{
-    background-color: #dadada;
-    border-radius: 10px;
-    border: 0px;
-    padding: 3px;
-  }
-  
   .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    color: #000000;
     display: block;
     transition: 0.3s;
     font-size: xx-large;
-  }
-  
-  .sidenav a:hover {
-    color: #f1f1f1;
   }
   
   .sidenav .closebtn {
@@ -100,12 +111,21 @@ body {
     margin-left: 50px;
   }
 
-  .sidenav.extend{
-    width: 50vw;
+  .navTabs a {
+    font-size: 3vw;
+    color: #000000;
   }
 
-.selected-nav{
-    background-color: aliceblue;
+  .navTabs a:hover {
+    text-decoration: underline;
+  }
+
+  .sidenav.extend{
+    width: 40vw;
+  }
+
+#selected-nav {
+    text-decoration: underline;
 }
 
 .on-board-box {
